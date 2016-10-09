@@ -1,0 +1,20 @@
+{
+  "db": {
+    "host": "u449610.mysql.masterhost.ru",
+    "dbname": "u449610",
+    "user": "u449610",
+    "password": "-re3tio_6Z"
+  },
+  "app": {
+    "site": "http://store.mastersoftware.ru",
+    "display_errors": "1"
+  },
+  "xxx": {
+    "yyy": "yyy_name",
+    "zzz": "zzz_name",
+    "params": {
+      "id": "number"
+    }
+  }
+}
+

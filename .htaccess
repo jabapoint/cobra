@@ -1,0 +1,26 @@
+DirectoryIndex index.php
+Options -Indexes
+Options -MultiViews
+
+AddDefaultCharset utf-8
+
+<ifModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_URI} !\.(js|css|jpg|jpeg|gif|png)$ [or]
+    RewriteCond %{REQUEST_URI} apple-touch-icon\.png$
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ index.php [L,QSA]
+</ifModule>
+
+AddType application/x-httpd-php .asp .py .pl .nov .b .htm .html
+
+<FilesMatch ".(htaccess|htpasswd|ini|php__|fla|psd|log|sh|jpeg|txt|phar|cobra|cobra)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+<IfModule mod_php5.c>
+#  php_value include_path ".:/usr/local/lib/php"
+  php_value phar.readonly Off
+</IfModule>

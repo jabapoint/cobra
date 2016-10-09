@@ -1,0 +1,105 @@
+<html>
+<head></head>
+<body>
+<h2>Account successfully created!</h2>
+
+<p>Hello {{ name }}</p>
+
+<p>Thank you for registering with us. Your account details are as follows: </p>
+
+<p style="margin-left: 10px">
+    Username: {{ username }} <br/>
+    Password: {{ password }}
+</p>
+
+<p>You've already been logged in, so go on in and have some fun!</p>
+
+{#{% for user in xxxxx %}#}
+    {#---{{ xxxxx.u1 }}#}
+{#{% else %}#}
+    {#Пользователи не найдены.#}
+{#{% endfor %}#}
+
+
+
+{% for key, value in book %}
+    {% if key == 'title' or key == 'author' %} {# выводим только два конкретных элемента, и то, если они существуют #}
+        {{ value }}
+    {% endif %}
+
+    {#{{ key }} = {{ value }} <br>#}
+{% else %}
+    Пользователи не найдены.
+{% endfor %}
+
+<div id="page">
+    <div id="header">
+        {% include 'primary.tmpl' %}
+    </div>
+
+    <div id="left">
+        {#{% include 'secondary.tmpl' %}#}
+    </div>
+
+    <div id="right">
+        This is the main page content. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </div>
+
+    <div id="footer">
+        {#{% include 'footer.tmpl' %}#}
+    </div>
+</div>
+
+{% set message %}
+    This is an error message.
+{% endset %}
+
+<h2>Book details</h2>
+<table>
+    <tr>
+        <td><strong>Title</strong></td>
+        <td>{{ book.title }}</td>
+    </tr>
+    <tr>
+        <td><strong>Author</strong></td>
+        <td>{{ book.author }}</td>
+    </tr>
+    <tr>
+        <td><strong>Publisher</strong></td>
+        <td>{{ book.publisher }}</td>
+    </tr>
+    <tr>
+        <td><strong>Pages</strong></td>
+        <td>{{ book.pages }}</td>
+    </tr>
+    <tr>
+        <td><strong>Category</strong></td>
+        <td>{{ book.category }}</td>
+    </tr>
+</table>
+
+<h2>Countries and capitals</h2>
+<table>
+    <tr class="heading">
+        <td>Country</td>
+        <td>Region</td>
+        <td>Population</td>
+        <td>Capital</td>
+        <td>Language</td>
+    </tr>
+    {% for d in data %}
+        <tr>
+            <td>{{ d.name|escape }}</td>
+            <td>{{ d.region|escape }}</td>
+            <td>{{ d.population|escape }}</td>
+            <td>{{ d.capital|escape }}</td>
+            <td>{{ d.language|escape }}</td>
+        </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>
+
+
+

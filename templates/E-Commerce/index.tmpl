@@ -1,0 +1,22 @@
+{% extends 'main.tmpl' %}
+
+{%  block slider %}
+    {{ parent() }}
+{%  endblock %}
+
+{%  block product %}
+{%  endblock %}
+
+{% block twitter_block %}
+{% endblock %}
+
+{%  block content %}
+    {%  include 'content.tmpl' | escape %}
+{%  endblock %}
+
+{% block collection_banner %}
+    {{ parent() }}
+{% endblock %}
+
+{%  block sponsors %}
+{%  endblock %}

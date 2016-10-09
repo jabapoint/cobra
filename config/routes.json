@@ -1,0 +1,37 @@
+{
+  "": {
+    "controller": "Index",
+    "method": "actionIndex"
+  },
+  "index": {
+    "controller": "Index",
+    "method": "actionIndex"
+  },
+  "products": {
+    "controller": "Product",
+    "method": "getAll"
+  },
+  "product/:id": {
+    "controller": "Product",
+    "method": "get",
+    "params": {
+      "id": "number"
+    }
+  },
+  "contacts": {
+    "controller": "Contacts",
+    "method": "actionIndex"
+  },
+  "main": {
+    "controller": "Main",
+    "method": "indexAction"
+  },
+  "lazy": {
+    "controller": "Lazy",
+    "method": "indexAction"
+  },
+  "z": {
+    "controller": "Z",
+    "method": "indexAction"
+  }
+}
