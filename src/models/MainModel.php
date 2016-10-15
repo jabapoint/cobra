@@ -1,7 +1,12 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: SERGEY
- * Date: 15.10.2016
- * Time: 13:13
- */
+    namespace Core;
+
+    class abstract Model
+    {
+        public static $message_error = 0;
+
+        public static function getError()
+        {
+            return self::$message_error;
+        }
+    }
