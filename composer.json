@@ -17,5 +17,5 @@
   "psr-4": {
     "Core\\":""
   },
-  "minimum-stability": "stable"
+  "minimum-stability": "master-dev"
 }
