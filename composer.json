@@ -12,7 +12,6 @@
   ],
   "require": {
     "php": ">=5.5.9",
-    "jabapoint/cobra": "dev-master"
   },
   "psr-4": {
     "Core\\":""
