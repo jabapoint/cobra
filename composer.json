@@ -2,8 +2,8 @@
   "name": "jabapoint/cobra",
   "version": "1.0.0",
   "type": "project",
-  "description": "Framework Cobra",
-  "homepage": "http://mastersoftware.ru",
+  "description": "PHP framework Cobra",
+  "homepage": "http://phpsmart.org",
   "license": "MIT",
   "authors": [
     {
@@ -12,10 +12,11 @@
     }
   ],
   "require": {
-    "php":">=5.3.0"
+    "php":">=7.1"
   },
   "psr-4": {
-    "Core\\":""
+    "Core\\":"/src"
   },
-  "minimum-stability": "dev"
+  "minimum-stability": "dev",
+  "prefer-stable": true,
 }
